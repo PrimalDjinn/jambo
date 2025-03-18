@@ -550,7 +550,6 @@ class AreaView(APIView):
             because the areas are not expected to change frequently.
             And yes I repeated that statement verbose all these times
         """
-        print(county_name, subcounty_name, ward_name)
         if area_name is not None:
             area = get_object_or_404(
                 Area,

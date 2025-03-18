@@ -11,3 +11,4 @@ docs/.vitepress/.temp
 static/
 data/
 logs/
+__pycache__
