@@ -2,7 +2,6 @@ version: '3'
 
 services:
   database:
-    # ✅
     container_name: database
     image: postgres:16
     environment:
@@ -15,7 +14,6 @@ services:
       - ./data:/data/pgdata
 
   backend:
-    # ✅
     container_name: backend
     build: .
     ports:
@@ -31,7 +29,6 @@ services:
       - redis
 
   nginx:
-    # ✅
     container_name: nginx
     build:
       context: ./nginx
@@ -45,7 +42,6 @@ services:
       - docs
 
   docs:
-    # ✅
     container_name: docs
     build:
       context: ./docs
@@ -54,7 +50,6 @@ services:
       - "4173:4173"
 
   redis:
-    # ✅
     container_name: redis
     image: redis:7.2
     ports:
